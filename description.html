@@ -11,9 +11,9 @@
         --padding-regular: 1.5rem;
 
         /* color */
-        --clr-neutral: hsl(120, 96%, 11%);
-        --clr-background: hsl(120, 32%, 67%);
-        --clr-light: #fcd8e6cc;
+        --clr-neutral: #e9efec;
+        --clr-background: #16423c;
+        --clr-light: #8cccc3;
       }
       * {
         margin: 0;
@@ -49,9 +49,14 @@
         padding-inline: var(--padding-min);
         padding-block: var(--padding-regular);
       }
+      .boldText {
+        font-weight: bold;
+      }
       section > p {
         font-size: clamp(1rem, 1.5vw, 4rem);
-        margin-bottom: var(--padding-min);
+        margin-bottom: var(--padding-regular);
+        text-align: justify;
+        font-weight: 200;
       }
     </style>
   </head>
@@ -62,12 +67,12 @@
       </nav>
       <section>
         <p>
-          <b>Hit: </b>
+          <b class="boldText">Hit: </b>
           Hit refers to the specific number you are required to identify and
           press within the box that displays a range or set of numbers
         </p>
         <p>
-          <b>Timer: </b>
+          <b class="boldText">Timer: </b>
           The timer is a countdown that starts when you begin the game. You will
           have a total of 60 seconds to play the game. During this period, your
           objective is to select the specific number indicated by the 'hit'
@@ -76,7 +81,7 @@
           be allowed.
         </p>
         <p>
-          <b>Score: </b>
+          <b class="boldText">Score: </b>
           The score section keeps track of your performance during the game.
           Your score increases each time you correctly select the number
           indicated by the 'hit' prompt. However, if you select an incorrect

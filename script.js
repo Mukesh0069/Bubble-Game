@@ -3,13 +3,13 @@ var timer = 60;
 var randomNumber = 0;
 var callCount = 0;
 var hitvalue = () =>{
-    randomNumber = Math.floor(Math.random()*10)
+    randomNumber = Math.floor(Math.random()*20)
     document.querySelector("#hitValue").textContent = randomNumber;
 }
 var makeBubble = () =>{
     var clutter = "";
     for(var i = 0; i <= 492; i++){
-        var randomNum = Math.floor(Math.random()*10)
+        var randomNum = Math.floor(Math.random()*20)
         clutter += `<div class="item">${randomNum}</div>`;
     }
     
@@ -54,7 +54,10 @@ var bubbleContainer = document.querySelector("#bubbleContainer");
             hitvalue();
         }
         else if(callCount > 2){
+            timer = 0;
             document.querySelector(".area").innerHTML = `<h1>You Lost <br>You Scored ${score}</h1>`;
+            document.querySelector("#timer").textContent = timer;
+
             
         }
         else{

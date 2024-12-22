@@ -3,30 +3,27 @@
     --gap-regular: 0.5rem;
 
     /* color */
-    --clr-neutral: hsl(120, 72%, 18%);
-    --clr-light: #fcd8e6cc;
+    --clr-neutral: #16423C;
+    --clr-light: #E9EFEC;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body:not(.icon-Container){
+body{
     min-height: 100vh;
-    background-color: hsl(120, 34%, 58%);
+    background-color: #8cccc3;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
 }
-.icon-Container{
-    display: flex;
-    height: 100vh;
-}
+
 .icon-Container .ri-questionnaire-line{
-    color: var(--clr-neutral);
-    font-size: 3rem;
+    color: var(--clr-light);
+    font-size: 1.5rem;
 }
 main{
     height: 750px; 
@@ -51,6 +48,10 @@ main{
     gap: var(--gap-regular);
     justify-content: center;
     align-content: center;
+    font-size: clamp(1rem,1.5vw, 2.5rem);   
+}
+.info > p{
+    margin-block: var(--gap-min);
 }
 .info > span{
     background-color: var(--clr-light);
