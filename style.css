@@ -1,0 +1,90 @@
+:root{
+    --gap-min: 0.25rem;
+    --gap-regular: 0.5rem;
+
+    /* color */
+    --clr-neutral: hsl(120, 72%, 18%);
+    --clr-light: #fcd8e6cc;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body:not(.icon-Container){
+    min-height: 100vh;
+    background-color: hsl(120, 34%, 58%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
+.icon-Container{
+    display: flex;
+    height: 100vh;
+}
+.icon-Container .ri-questionnaire-line{
+    color: var(--clr-neutral);
+    font-size: 3rem;
+}
+main{
+    height: 750px; 
+    width: 1200px;
+    background-color: var(--clr-light);
+    border-radius: var(--gap-regular);
+    overflow: hidden;
+}
+.title-bar{
+    min-height: fit-content;
+    background-color: var(--clr-neutral);
+    color: var(--clr-light);
+    display: flex;
+    justify-content: space-around;
+    padding-inline: var(--gap-min);
+    padding-block: var(--gap-regular);
+}
+.title-bar > .info{
+    width: 100%;    
+    padding-block: var(--gap-min);
+    display: flex;
+    gap: var(--gap-regular);
+    justify-content: center;
+    align-content: center;
+}
+.info > span{
+    background-color: var(--clr-light);
+    color: var(--clr-neutral);
+    padding-block: 0.15rem;
+    padding-inline: 0.75rem; 
+}
+.area{
+    padding:var(--gap-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap-regular);
+    overflow: auto;
+    min-height: 700px;
+    color: var(--clr-neutral);
+    font-size: clamp(1rem,2.5vw, 4rem);   
+    text-align: center;
+}
+.area > .item{
+    --size-regular: 2rem;
+    --border-radius: 50%;
+    height: var(--size-regular);
+    width: var(--size-regular);
+    background-color: var(--clr-neutral);
+    color: var(--clr-light);
+    border-radius: var(--border-radius);
+    display: grid;
+    place-content: center;
+    transition: background-color .2s ease-in-out;
+    font-size: 1rem;
+}
+.item:hover{
+    background-color: hsl(120, 71%, 26%);
+    cursor: pointer;
+}

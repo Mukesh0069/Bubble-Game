@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>description</title>
+    <style>
+      :root {
+        /* Padding */
+        --padding-min: 1rem;
+        --padding-regular: 1.5rem;
+
+        /* color */
+        --clr-neutral: hsl(120, 96%, 11%);
+        --clr-background: hsl(120, 32%, 67%);
+        --clr-light: #fcd8e6cc;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        /* min-height: 100vh; */
+        background-color: var(--clr-background);
+        color: var(--clr-neutral);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        padding: 2rem;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      nav {
+        text-align: center;
+      }
+      nav > h1 {
+        font-size: clamp(2rem, 2.5vw, 4rem);
+        margin-bottom: calc(var(--padding-regular) + 0.5rem);
+      }
+      section {
+        border: 2px solid var(--clr-neutral);
+        border-radius: var(--padding-regular);
+        width: min(75vw, 45rem);
+        padding-inline: var(--padding-min);
+        padding-block: var(--padding-regular);
+      }
+      section > p {
+        font-size: clamp(1rem, 1.5vw, 4rem);
+        margin-bottom: var(--padding-min);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1>How to Play</h1>
+      </nav>
+      <section>
+        <p>
+          <b>Hit: </b>
+          Hit refers to the specific number you are required to identify and
+          press within the box that displays a range or set of numbers
+        </p>
+        <p>
+          <b>Timer: </b>
+          The timer is a countdown that starts when you begin the game. You will
+          have a total of 60 seconds to play the game. During this period, your
+          objective is to select the specific number indicated by the 'hit'
+          prompt within the numeric box. Once the 60 seconds elapse, the game
+          will automatically conclude, and no further selections or actions will
+          be allowed.
+        </p>
+        <p>
+          <b>Score: </b>
+          The score section keeps track of your performance during the game.
+          Your score increases each time you correctly select the number
+          indicated by the 'hit' prompt. However, if you select an incorrect
+          number, your score will decrease by 10 points as a penalty. The score
+          dynamically updates in real-time based on your selections, reflecting
+          your accuracy and progress throughout the game.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
